@@ -9,5 +9,15 @@ get("/") do
 end
 
 get("/rock") do
-  "rock"
+  moves = ["rock", "paper", "scissors"]
+
+  comp_move = moves.sample
+
+  "
+  <h2>
+    we played rock!
+    </h2>
+    
+    <h2>
+      They played "+ comp_move +" !"
 end
