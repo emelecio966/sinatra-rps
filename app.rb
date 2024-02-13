@@ -3,7 +3,7 @@ require "sinatra/reloader"
 
 get("/") do
   "
-  <h1>Welcome to your Sinatra App!</h1>
+  <h1>Howdy!</h1>
   <p>Define some routes in app.rb</p>
   "
 end
@@ -11,13 +11,15 @@ end
 get("/rock") do
   moves = ["rock", "paper", "scissors"]
 
-  comp_move = moves.sample
+  @comp_move = moves.sample 
 
-  "
-  <h2>
-    we played rock!
-    </h2>
-    
-    <h2>
-      They played "+ comp_move +" !"
-end
+ # if comp_move == "rock"
+ #   @outcome = "tied"
+ # elsif @comp_move == "paper"
+ #   @outcome = "lost"
+ # else 
+ #   @outcome = "won"
+ # end 
+
+  erb(:zebra)
+end 
