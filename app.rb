@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 
 get("/") do
- erb(:homepage) 
+ erb(:rules) 
 end
 
 get("/rock") do
@@ -28,7 +28,7 @@ get("/paper") do
 
   if @comp_move == "paper"
    @outcome = "tied"
-  elsif @comp_move == "rock"
+  elsif @comp_move == "paper"
    @outcome = "lost"
   else 
    @outcome = "won"
